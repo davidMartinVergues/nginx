@@ -1,0 +1,10 @@
+services:
+  my-nginx:
+    container_name: website
+    image: my-nginx:nginx-image-customized
+    build:
+      context: .
+    ports:
+      - 8000:80
+    volumes:
+      - ./my-volume:/usr/share/nginx/html/
