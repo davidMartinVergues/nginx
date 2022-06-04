@@ -191,6 +191,20 @@ We have two ways to do that.
 
 Now that you have created your image, you need to share it on a registry so it can be downloaded and run on any destination machine. A registry is a stateless, server-side application that stores and lets you distribute Docker images. By default docker provides an official free-to-use registry, `DockerHub`. where you can push and pull your images.
 
+First you need to tag your image correctly, using your docker ID 
+
+
+```
+docker login
+
+docker tag my-webserver dmartinvergues/my-webserver:v1
+```
+and finaly push it  
+
+```
+docker push dmartinvergues/my-webserver:v1
+```
+
 ## SAVE AND LOAD IMAGES AS FILES
 
 Lastly it is also possible to export and load your Docker image as a file.
